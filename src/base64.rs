@@ -472,18 +472,4 @@ mod tests {
         assert!("Z===".from_base64().is_err());
     }
 
-    #[test]
-    fn test_base64_random() {
-        use rand::{thread_rng, Rng};
-
-        for _ in 0..1000 {
-            let times = thread_rng().gen_range(1, 100);
-            let v = thread_rng().gen_iter::<u8>().take(times)
-                                .collect::<Vec<_>>();
-            assert_eq!(v.to_base64(STANDARD)
-                        .from_base64()
-                        .unwrap(),
-                       v);
-        }
-    }
 }

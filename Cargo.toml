@@ -15,6 +15,3 @@ support for hex, base64, and json encoding and decoding.
 
 This crate is deprecated in favor of serde.
 """
-
-[dev-dependencies]
-rand = "0.3"
